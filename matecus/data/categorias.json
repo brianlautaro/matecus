@@ -1,0 +1,27 @@
+[
+    {
+        "id": "todos",
+        "nombre": "Todos",
+        "icono": "bi-cup-hot"
+    },
+    {
+        "id": "mates",
+        "nombre": "Mates",
+        "icono": "bi-tag"
+    },
+    {
+        "id": "termos",
+        "nombre": "Termos",
+        "icono": "bi-tag"
+    },
+    {
+        "id": "bombillas",
+        "nombre": "Bombillas",
+        "icono": "bi-tag"
+    },
+    {
+        "id": "combos",
+        "nombre": "Combos",
+        "icono": "bi-tag"
+    }
+]

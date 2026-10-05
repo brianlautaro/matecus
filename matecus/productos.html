@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de mates, combos, bombillas, termos y accesorios - Matecus">
+  <title>Productos | Matecus</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='0.9em' font-size='56'%3E%F0%9F%A7%89%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+
+    <div class="barra-anuncios" aria-label="Anuncios">
+    <span class="ticker">
+      Productos materos para consumidor final | 
+      Pagá con transferencia, Mercado Pago o efectivo | 
+      <a href="https://wa.me/5491159361297">Consultá por WhatsApp</a>
+    </span>
+  </div>
+
+    <nav class="navbar navbar-expand-lg navbar-matecus">
+    <div class="container">
+      <a class="navbar-brand-logo" href="index.html" aria-label="Matecus - Inicio">
+        <img class="leaf" src="img/logo.png" alt="Matecus">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarMain" aria-controls="navbarMain"
+              aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://wa.me/5491159361297" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </li>
+        </ul>
+        <button class="btn-carrito nav-link" data-open-carrito aria-label="Abrir carrito">
+          <i class="bi bi-bag"></i>
+          Carrito
+          <span class="carrito-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+    <section class="hero-small" aria-label="Encabezado de productos">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-2">
+          <li class="breadcrumb-item"><a href="index.html" style="color:rgba(255,255,255,0.7)">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page" style="color:white">Productos</li>
+        </ol>
+      </nav>
+      <h1>Nuestros Productos</h1>
+      <p>Mates, combos, bombillas, termos y accesorios</p>
+    </div>
+  </section>
+
+    <section class="seccion-productos" aria-label="Catálogo de productos">
+    <div class="container">
+
+            <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between mb-3">
+        <div class="buscador-productos">
+          <i class="bi bi-search icono-buscar"></i>
+          <input type="search" id="buscador-productos" class="form-control"
+                 placeholder="Buscar productos..." aria-label="Buscar productos">
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <label for="orden-productos" class="text-muted small fw-semibold">Ordenar por:</label>
+          <select id="orden-productos" class="form-select form-select-sm" style="width:auto"
+                  aria-label="Ordenar productos">
+            <option value="default">Destacados</option>
+            <option value="precio-asc">Precio: de menor a mayor</option>
+            <option value="precio-desc">Precio: de mayor a menor</option>
+            <option value="nuevos">Más nuevo</option>
+          </select>
+        </div>
+      </div>
+
+            <div class="filtros-bar" id="filtros-categorias" role="group" aria-label="Filtrar por categoría">
+              </div>
+
+            <p class="text-muted small mb-3" id="contador-productos"></p>
+
+            <div class="row" id="grid-productos">
+        <div class="col-12 text-center py-5">
+          <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Cargando...</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+          <div class="footer-brand"><img src="img/logo.png" alt="Matecus" class="footer-logo"></div>
+          <p class="footer-desc">
+            Tu producto y accesorio matero. Calidad al alcance de todos.
+          </p>
+          <div class="redes-sociales">
+            <a href="https://instagram.com/" target="_blank" rel="noopener" class="red-social" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://wa.me/5491159361297" target="_blank" rel="noopener" class="red-social" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6>Nosotros</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6>Catálogo</h6>
+          <ul class="footer-links">
+            <li><a href="productos.html?cat=mates">Mates</a></li>
+            <li><a href="productos.html?cat=combos">Combos</a></li>
+            <li><a href="productos.html?cat=bombillas">Bombillas</a></li>
+            <li><a href="productos.html?cat=termos">Termos</a></li>
+            <li><a href="productos.html?cat=accesorios">Accesorios</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6>Contacto</h6>
+          <div class="footer-contacto">
+            <p><i class="bi bi-telephone-fill"></i> +54 9 11 5936-1297 </p>
+            <p><i class="bi bi-envelope-fill"></i> arielfacundoespinosa@gmail.com</p>
+            <p><i class="bi bi-geo-alt-fill"></i>Hurlingham</p>
+          </div>
+           <a href="https://wa.me/5491159361297" target="_blank" rel="noopener"
+             class="btn btn-success btn-sm rounded-pill mt-1">
+            <i class="bi bi-whatsapp"></i> Escribinos
+          </a>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h6>Medios de pago</h6>
+          <div class="pagos-logos">
+            <span class="pago-chip">Transferencia</span>
+            <span class="pago-chip">Mercado Pago</span>
+            <span class="pago-chip">Efectivo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>© 2026 Matecus · Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+    <div class="offcanvas offcanvas-end offcanvas-carrito" tabindex="-1" id="offcanvasCarrito"
+       aria-labelledby="offcanvasCarritoLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCarritoLabel">
+        <i class="bi bi-bag me-2"></i> Tu carrito
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Cerrar carrito"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="carrito-items"></div>
+    </div>
+    <div class="p-3 border-top">
+      <div class="d-flex justify-content-between mb-3">
+        <span class="fw-semibold">Total:</span>
+        <span class="carrito-total fw-bold" id="carrito-total">$0</span>
+      </div>
+      <button class="btn-finalizar" onclick="finalizarPedido()">
+        <i class="bi bi-whatsapp me-2"></i> Realizar pedido
+      </button>
+      <button class="btn btn-outline-danger btn-sm w-100 mt-2" onclick="vaciarCarrito()">
+        Vaciar carrito
+      </button>
+    </div>
+  </div>
+
+    <a href="https://wa.me/5491159361297" target="_blank" rel="noopener"
+     class="btn-whatsapp-float" aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="wsp-tooltip">Escribinos</span>
+  </a>
+
+    <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/productos.js?v=4"></script>
+  <script src="js/carrito.js?v=4"></script>
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>

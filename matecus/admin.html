@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel admin Matecus">
+  <title>Admin | Matecus</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='0.9em' font-size='56'%3E%F0%9F%A7%89%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-matecus">
+    <div class="container">
+      <a class="navbar-brand-logo" href="index.html" aria-label="Matecus - Inicio">
+        <img class="leaf" src="img/logo.png" alt="Matecus">
+        <span class="title"> -> ADMINISTRADOR <- </span>
+      </a>
+      <a class="btn btn-outline-light btn-sm rounded-pill" href="index.html">Volver al sitio</a>
+    </div>
+  </nav>
+
+  <section class="py-5" style="background:var(--crema); min-height: calc(100vh - 80px);">
+    <div class="container">
+      <div class="row justify-content-center" id="login-box">
+        <div class="col-md-5">
+          <div class="contacto-card">
+            <h1 class="h4 fw-bold mb-3" style="color:var(--verde-oscuro)">Ingreso</h1>
+            <p class="text-muted small">Solo para gestión interna de productos.</p>
+            <form id="form-admin-login" class="mt-3">
+              <div class="mb-3">
+                <label class="form-label" for="admin-user">Usuario</label>
+                <input id="admin-user" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="admin-pass">Contraseña</label>
+                <input id="admin-pass" type="password" class="form-control" required>
+              </div>
+              <button type="submit" class="btn-enviar">Ingresar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel-admin" class="d-none">
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+          <h2 class="h4 fw-bold m-0" style="color:var(--verde-oscuro)">Panel de administrador</h2>
+          <button id="btn-admin-logout" class="btn btn-outline-danger btn-sm">Cerrar sesión</button>
+        </div>
+
+                <div class="contacto-card mb-4">
+          <h3 class="h5 fw-bold mb-3" style="color:var(--verde-oscuro)">Categorías</h3>
+          <div id="admin-categorias" class="admin-categorias-lista mb-3"></div>
+          <form id="form-nueva-categoria" class="d-flex flex-wrap gap-2">
+            <input id="nueva-categoria-nombre" class="form-control" style="max-width:280px"
+                   placeholder="Nombre de la nueva categoría" required>
+            <button type="submit" class="btn btn-success btn-sm">
+              <i class="bi bi-plus-lg"></i> Agregar categoría
+            </button>
+          </form>
+        </div>
+
+                <div class="contacto-card mb-4">
+          <h3 class="h5 fw-bold mb-3" style="color:var(--verde-oscuro)">Agregar producto</h3>
+          <form id="form-nuevo-producto">
+            <div class="row g-2">
+              <div class="col-12 col-md-5">
+                <label class="form-label">Nombre</label>
+                <input id="nuevo-producto-nombre" class="form-control" required>
+              </div>
+              <div class="col-6 col-md-2">
+                <label class="form-label">Precio</label>
+                <input id="nuevo-producto-precio" type="number" min="0" class="form-control" required>
+              </div>
+              <div class="col-6 col-md-5">
+                <label class="form-label">Categoría</label>
+                <select id="nuevo-producto-categoria" class="form-select" required></select>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">Imagen (máx. 6 MB)</label>
+                <input id="nuevo-producto-imagen" type="file" accept="image/*" class="form-control">
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label">Descripción</label>
+                <textarea id="nuevo-producto-descripcion" class="form-control" rows="1"></textarea>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-success btn-sm">
+                  <i class="bi bi-plus-lg"></i> Agregar producto
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+                <div class="contacto-card">
+          <h3 class="h5 fw-bold mb-3" style="color:var(--verde-oscuro)">Editar productos</h3>
+
+                    <div class="d-flex flex-wrap gap-3 align-items-center mb-3">
+            <div class="buscador-productos" style="max-width:340px">
+              <i class="bi bi-search icono-buscar"></i>
+              <input type="search" id="admin-buscador" class="form-control"
+                     placeholder="Buscar por nombre..." aria-label="Buscar producto">
+            </div>
+            <select id="admin-filtro-categoria" class="form-select" style="max-width:220px" aria-label="Filtrar por categoría">
+              <option value="todos">Todas las categorías</option>
+            </select>
+            <span class="text-muted small" id="admin-contador"></span>
+          </div>
+
+          <div id="admin-productos" class="admin-lista-productos"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/productos.js?v=4"></script>
+  <script src="js/admin.js?v=4"></script>
+</body>
+</html>
